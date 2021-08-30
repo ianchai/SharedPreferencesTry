@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:onClick="stopFunction"
     tools:context=".MainActivity">
 
     <ImageView
         android:id="@+id/imageAnimation"
         android:layout_width="0dp"
         android:layout_height="0dp"
+        android:contentDescription="@string/animation"
         app:layout_constraintBottom_toTopOf="@+id/stop"
         app:layout_constraintDimensionRatio="4:5"
         app:layout_constraintHorizontal_bias="0.5"
@@ -22,7 +24,7 @@
         android:id="@+id/Run"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Run"
+        android:text="@string/run"
         app:layout_constraintBaseline_toBaselineOf="@+id/stop"
         app:layout_constraintEnd_toStartOf="@+id/stop"
         app:layout_constraintHorizontal_bias="0.5"
@@ -32,7 +34,8 @@
         android:id="@+id/stop"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Stop"
+        android:onClick="stopFunction"
+        android:text="@string/stop"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"

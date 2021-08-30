@@ -4,6 +4,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.ImageView
 import android.graphics.drawable.AnimationDrawable
+import android.view.View
+import android.widget.Button
 
 class MainActivity : AppCompatActivity() {
     private lateinit var frameAnimation:AnimationDrawable
@@ -22,5 +24,9 @@ class MainActivity : AppCompatActivity() {
         super.onWindowFocusChanged(hasFocus)
         if (hasFocus) frameAnimation.start()    // Start the animation when in Focus
         else frameAnimation.stop()              // and stop it when not in Focus
+    }
+
+    fun stopFunction(view:View) {
+        frameAnimation.stop()
     }
 }
