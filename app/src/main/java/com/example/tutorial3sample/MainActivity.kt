@@ -11,7 +11,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         // Get the Image View
-        val view = findViewById(R.id.imageAnimation) as ImageView
+        val view = findViewById<ImageView>(R.id.imageAnimation)
         // Setting animation_list.xml as the foreground of the image view
         view.setBackgroundResource(R.drawable.animation_list)
         // Get the Animation Drawable
