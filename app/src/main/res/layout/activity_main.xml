@@ -24,6 +24,7 @@
         android:id="@+id/Run"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:onClick="runFunction"
         android:text="@string/run"
         app:layout_constraintBaseline_toBaselineOf="@+id/stop"
         app:layout_constraintEnd_toStartOf="@+id/stop"

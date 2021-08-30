@@ -29,4 +29,8 @@ class MainActivity : AppCompatActivity() {
     fun stopFunction(view:View) {
         frameAnimation.stop()
     }
+
+    fun runFunction(view:View) {
+        frameAnimation.start()
+    }
 }
