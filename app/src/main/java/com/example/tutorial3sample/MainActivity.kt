@@ -14,22 +14,11 @@ class MainActivity : AppCompatActivity() {
         // Get the Image View
         val view = findViewById<ImageView>(R.id.imageGallery)
         // Setting animation_list.xml as the foreground of the image view
-        view.setBackgroundResource(R.drawable.animation_list)
-        // Get the Animation Drawable
-        frameAnimation = view.getBackground() as AnimationDrawable
     }
 
-    override fun onWindowFocusChanged(hasFocus: Boolean) {
-        super.onWindowFocusChanged(hasFocus)
-        if (hasFocus) frameAnimation.start()    // Start the animation when in Focus
-        else frameAnimation.stop()              // and stop it when not in Focus
+    fun backFunction(view:View) {
     }
 
-    fun stopFunction(view:View) {
-        frameAnimation.stop()
-    }
-
-    fun runFunction(view:View) {
-        frameAnimation.start()
+    fun nextFunction(view:View) {
     }
 }

@@ -12,7 +12,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:contentDescription="@string/gallery"
-        app:layout_constraintBottom_toTopOf="@+id/stop"
+        app:layout_constraintBottom_toTopOf="@+id/next"
         app:layout_constraintDimensionRatio="4:3"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -21,25 +21,25 @@
         app:srcCompat="@drawable/IMG_20210903_064025" />
 
     <Button
-        android:id="@+id/Run"
+        android:id="@+id/previous"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="runFunction"
-        android:text="@string/next"
-        app:layout_constraintBaseline_toBaselineOf="@+id/stop"
-        app:layout_constraintEnd_toStartOf="@+id/stop"
+        android:onClick="backFunction"
+        android:text="@string/previous"
+        app:layout_constraintBaseline_toBaselineOf="@+id/next"
+        app:layout_constraintEnd_toStartOf="@+id/next"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
 
     <Button
-        android:id="@+id/stop"
+        android:id="@+id/next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="stopFunction"
-        android:text="@string/previous"
+        android:onClick="nextFunction"
+        android:text="@string/next"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toEndOf="@+id/Run"
+        app:layout_constraintStart_toEndOf="@+id/previous"
         app:layout_constraintTop_toBottomOf="@+id/imageGallery" />
 </androidx.constraintlayout.widget.ConstraintLayout>
