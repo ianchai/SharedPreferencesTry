@@ -16,7 +16,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/IMG_20210903_064025" />
+        app:srcCompat="@drawable/f1" />
 
     <Button
         android:id="@+id/next"
