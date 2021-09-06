@@ -1,4 +1,4 @@
-package com.example.tutorial3sample
+package com.example.tutorial5sample
 
 import org.junit.Test
 

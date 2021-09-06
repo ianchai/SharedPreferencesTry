@@ -1,9 +1,9 @@
-package com.example.tutorial3sample
+package com.example.tutorial5sample
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.widget.ImageView
-import android.graphics.drawable.AnimationDrawable
 import android.view.View
 
 class MainActivity : AppCompatActivity() {
@@ -22,6 +22,17 @@ class MainActivity : AppCompatActivity() {
 
     fun nextFunction(view:View) {
         picNum=(picNum+1)%picture.size
+        pictureView.setBackgroundResource(picture[picNum])
+    }
+
+    override fun onSaveInstanceState(outState: Bundle) {
+        super.onSaveInstanceState(outState)
+        outState.putInt("picNum",picNum)
+    }
+
+    override fun onRestoreInstanceState(savedInstanceState: Bundle) {
+        super.onRestoreInstanceState(savedInstanceState)
+        picNum=savedInstanceState.getInt("picNum")
         pictureView.setBackgroundResource(picture[picNum])
     }
 }
