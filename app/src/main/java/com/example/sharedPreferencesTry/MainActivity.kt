@@ -1,10 +1,12 @@
-package com.example.tutorial5sample
+package com.example.sharedPreferencesTry
 
+import android.content.Context
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.widget.ImageView
 import android.view.View
+import android.widget.Toast
 
 class MainActivity : AppCompatActivity() {
     val picture:IntArray=intArrayOf(R.drawable.f1,R.drawable.f2,R.drawable.f3,R.drawable.f4,R.drawable.f5)
@@ -13,6 +15,10 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val prefs = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
+        picNum = prefs.getInt("picNum", 0)
+
         setContentView(R.layout.activity_main)
         // Get the Image View
         pictureView = findViewById<ImageView>(R.id.imageGallery)
@@ -34,5 +40,14 @@ class MainActivity : AppCompatActivity() {
         super.onRestoreInstanceState(savedInstanceState)
         picNum=savedInstanceState.getInt("picNum")
         pictureView.setBackgroundResource(picture[picNum])
+    }
+
+    override fun onPause() {
+        super.onPause()
+
+        val prefs = getSharedPreferences(getString(R.string.app_name), Context.MODE_PRIVATE)
+        val editor = prefs.edit()
+        editor.putInt("picNum",picNum)
+        editor.apply()
     }
 }

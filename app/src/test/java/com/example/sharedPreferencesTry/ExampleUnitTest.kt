@@ -1,4 +1,4 @@
-package com.example.tutorial5sample
+package com.example.sharedPreferencesTry
 
 import org.junit.Test
 
